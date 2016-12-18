@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/album_art"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:clickable="true"
+            android:contentDescription="Album art"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mean_something_kinder_than_wolves"
+            android:transitionName="albumArt" />
+
+        <RelativeLayout
+            android:id="@+id/title_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/album_art"
+            android:background="#31576b"
+            android:paddingBottom="20dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="40dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/album_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mean something"
+                android:textAppearance="?android:textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/album_title"
+                android:text="Kinder Than Wolves"
+                android:textAppearance="?android:textAppearance" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/title_panel"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="-30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/green_circle"
+            android:contentDescription="Action button"
+            android:src="@drawable/ic_pause_24dp"
+            android:transitionName="fab" />
+
+        <LinearLayout
+            android:id="@+id/track_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_panel"
+            android:background="#eee"
+            android:gravity="center_vertical"
+            android:minHeight="80dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/volumn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:contentDescription="Sound icon"
+                android:src="@drawable/ic_volume_up_24dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1"
+                android:text="Make you Feel"
+                android:textAppearance="?android:textAppearanceInverse"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="4:20"
+                android:textAppearance="?android:textAppearanceInverse" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lyrics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/track_panel"
+            android:layout_margin="16dp"
+            android:text="@string/lyrics"
+            android:textAppearance="?android:textAppearanceInverse" />
+    </RelativeLayout>
+</ScrollView>
